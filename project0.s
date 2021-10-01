@@ -7,7 +7,10 @@ main: # changing this line to main2 prints "HEllo World!"
  li $v0, 4
  la $a0, out_string
  syscall
- lb $t2, 2($a0)
+ lb $t1, 2($a0) # changed this $t1 to $t2, and there were no catastrophic error messages
+ # yielded [Instruction references undefined symbol at 0x00400014]
+ # just plain old refused to run, which was a little disappointing!
+ # sometimes deep down you want your computer to implode, y'know?
  addi $t1, $t1, -32
  sb $t1, 2($a0)
  syscall
