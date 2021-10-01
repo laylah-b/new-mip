@@ -2,7 +2,7 @@
  .data
  out_string: .asciiz "\nHello, World!\n"
  .text
-main:
+main: # changing this line to main2 prints "HEllo World!"
  li $v0, 4
  la $a0, out_string
  syscall
